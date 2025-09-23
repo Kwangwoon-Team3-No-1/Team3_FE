@@ -34,7 +34,7 @@ export function ConsentModal({ onApply }) {
                 등
               </li>
             </ul>
-            <div className='agreement-checkbox' onClick={() => setAgreed(!agreed)}>
+            <div className='agreement-checkbox' onClick={() => setAgreed(true)}>
               <Icon
                 name={agreed ? 'agree-checkbox-filled' : 'agree-checkbox-default'}
                 width={20}
