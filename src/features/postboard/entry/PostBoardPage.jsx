@@ -64,7 +64,6 @@ import { PostContainer } from '../components/PostContainer'
 import { useNavigate } from 'react-router-dom'
 import './PostBoardPage.css'
 import { getUserRole } from '../../../api/client'
-// 더미 데이터 함수를 외부 파일에서 임포트
 
 export function PostBoardPage() {
   const [userRole, setUserRole] = useState(null)

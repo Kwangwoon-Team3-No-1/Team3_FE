@@ -61,7 +61,7 @@
 import { useRef } from 'react'
 import { PostList } from './PostList'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
-import { useFetchPostList } from '../hooks/useFetchPostList' // 수정된 훅 임포트
+import { useFetchPostList } from '../hooks/useFetchPostList'
 import './PostContainer.css'
 
 // 카테고리 변환 매핑

@@ -44,18 +44,16 @@
 // }
 
 import { useState, useEffect, useCallback } from 'react'
-// 임포트 경로를 현재 파일 구조에 맞게 추정하여 수정합니다.
 import { createDummyData } from './CreateDummyData'
 
 const DUMMY_FETCH_DELAY = 500
 
 export const useFetchPostList = () => {
   const [postList, setPostList] = useState([])
-  const [page, setPage] = useState(1) // 시작 페이지를 1로 변경 (createDummyData 함수와 맞춤)
+  const [page, setPage] = useState(1)
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
 
-  // 더 이상 불러올 데이터가 없을 때 false
   const [hasMore, setHasMore] = useState(true)
 
   const enabled = !isLoading && hasMore && !isError
@@ -66,14 +64,12 @@ export const useFetchPostList = () => {
     setIsLoading(true)
     setIsError(false)
 
-    // 더미 데이터 로딩 시뮬레이션
     setTimeout(() => {
       try {
-        // createDummyData는 page와 size를 받음
         const newData = createDummyData(page)
 
         if (newData.length === 0 || page > 3) {
-          // 예시로 3페이지만 데이터를 만들도록 설정
+          // 더미로 3페이지만 데이터를 만들도록 설정
           setHasMore(false)
         } else {
           setPostList((prevList) => [...prevList, ...newData])
@@ -88,9 +84,7 @@ export const useFetchPostList = () => {
     }, DUMMY_FETCH_DELAY)
   }, [page, isLoading, hasMore])
 
-  // 초기 로드 (useEffect에서 한 번만 호출)
   useEffect(() => {
-    // 페이지네이션을 위해 첫 로드 시에는 loadNextPage를 호출
     loadNextPage()
   }, [])
 
