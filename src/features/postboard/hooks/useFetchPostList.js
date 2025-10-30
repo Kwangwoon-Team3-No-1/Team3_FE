@@ -46,7 +46,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { createDummyData } from './CreateDummyData'
 
-const DUMMY_FETCH_DELAY = 500
+const DUMMY_FETCH_DELAY = 1000
 
 export const useFetchPostList = () => {
   const [postList, setPostList] = useState([])

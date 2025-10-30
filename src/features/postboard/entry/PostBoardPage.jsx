@@ -102,9 +102,10 @@ export function PostBoardPage() {
       <div className='post-board-page--scroll-container'>
         <PostContainer searchQuery={searchQuery} />
       </div>
-      {userRole === 'ROLE_HOST' && (
-        <div className='post-board-page__floating-button-link' onClick={handleFormClick}>
-          <button className='post-board-page__floating-button'>
+      {/* 테스트 위해 ROLE_HOST로 고정해둠 */}
+      {userRole !== 'ROLE_HOST' && (
+        <div className='post-board-page__floating-button-link'>
+          <button className='post-board-page__floating-button' onClick={handleFormClick}>
             <Icon name='post-form' width={24} height={24} />
           </button>
         </div>

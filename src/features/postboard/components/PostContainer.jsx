@@ -73,7 +73,6 @@ const categoryMap = {
 
 export const PostContainer = ({ searchQuery }) => {
   const observerRef = useRef(null)
-
   const { postList, loadNextPage, enabled, isError, isLoading } = useFetchPostList()
 
   useIntersectionObserver(observerRef, loadNextPage, enabled)
