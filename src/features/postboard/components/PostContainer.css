@@ -1,4 +1,4 @@
-.list-container {
+.post-container__list {
   flex-grow: 1;
   margin-bottom: 100px;
   overflow: scroll;

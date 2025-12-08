@@ -1,4 +1,4 @@
-/*
+/* 실제 해커톤 제출 코드
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { formatPromoDate } from '../../../utils/promoDate'
@@ -72,6 +72,7 @@ export function PostDetailPage() {
   if (isError || !post) return <div>게시물을 찾을 수 없습니다.</div>
   */
 
+// 더미데이터, 테스트 용
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { formatPromoDate } from '../../../utils/promoDate'
@@ -95,10 +96,10 @@ export function PostDetailPage() {
 
   const [userRole, setUserRole] = useState(null)
 
+  //더미데이터
   useEffect(() => {
     setUserRole('ROLE_MATE')
   }, [])
-
   const post = {
     thumbnail: 'https://placehold.co/600x400',
     category: '식당',
